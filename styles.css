@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 64px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: fixed;      
+    top: 0;              
+    left: 0;
+    width: 100%;
+    z-index: 300;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #222;
+    letter-spacing: 2px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.elements {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.2s;
+     font-family: 'Poppins', Arial, sans-serif;
+
+}
+nav ul li a:hover {
+    color: #20bb0b;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 20;
+}
+.bar {
+    height: 4px;
+    width: 100%;
+    background: #ffffff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+/****************************************** SECCION 1 -> HOME ********************************/
+.home-section {
+    min-height: 100vh;
+    width: 100%;
+    background: url('assets/home.jpeg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.603); /* oscurece la imagen para mejor legibilidad */
+    z-index: 1;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.empresa-nombre {
+    text-shadow: 0 0 1px #fff, 0 0 2px #ffffff, 0 0 21px #ffffff;
+    font-family: 'Pacifico', cursive;
+    font-size: 8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.decor-line {
+    width: 600px;
+    height: 4px;
+    background: #ffffff;
+    margin: 0 auto 24px auto;
+    border-radius: 2px;
+}
+
+.refran {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.7rem;
+    color: #fff;
+    margin-top: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+/*************************** SECCION 2 -> QUIENES SOMOS ***********************************/
+.quienes-somos-section {
+    max-width: 900px;
+    margin: 80px auto 0 auto;
+    padding: 48px 24px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    text-align: center;
+    position: relative;
+}
+
+.qs-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8rem;
+    color: #20bb0b;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+}
+
+.qs-content {
+    position: relative;
+    font-size: 1.25rem;
+    color: #000000;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.qs-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 24px 32px 24px 0;
+    float: left;
+    shape-outside: circle();
+    shape-margin: 16px;
+}
+
+.qs-img-right {
+    float: right;
+    margin: 24px 0 24px 32px;
+}
+/************************ MODAL VENTAJAS **************************************/
+.ventajas-modal {
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    background: url('assets/home3.jpg') center center/cover no-repeat;
+    align-items: stretch;
+    justify-content: center;
+}
+.ventajas-modal.active {
+    display: flex;
+}
+.ventajas-modal-content {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 64px; /* deja espacio para el header fijo */
+}
+.ventajas-modal-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.25);
+}
+.ventajas-modal-left .empresa-nombre {
+    font-size: 5rem; 
+}
+.ventajas-modal-left .decor-line {
+    width: 500px;
+    height: 4px;
+    background: #ffffff;
+    margin: 0 auto 24px auto;
+    border-radius: 2px;
+}
+.ventajas-modal-left .refran {
+    font-size: 2rem;
+}
+
+.ventajas-modal-right {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.938);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 32px 40px 32px;
+    position: relative;
+    min-width: 320px;
+    overflow-y: auto;
+}
+.ventajas-modal-right h2 {
+    margin-top: 40vh;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-align: center;
+}
+.ingredientes-modal-right {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.938);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 32px 40px 32px;
+    position: relative;
+    min-width: 320px;
+    overflow-y: auto;
+}
+.ingredientes-modal-right h2 {
+    margin-top: 10vh;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.ventajas-line {
+    width: 300px;
+    height: 4px;
+    background: #ffffff;
+    margin: 0 auto 32px auto;
+    border-radius: 2px;
+}
+
+.ventajas-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ventajas-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 32px;
+    background: rgba(22, 22, 22, 0.836);
+    border-radius: 16px;
+    padding: 18px 16px;
+}
+
+.ventaja-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.ventajas-list strong {
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-shadow: 0 0 1px #fff, 0 0 2px #ffffff, 0 0 21px #ffffff;
+}
+
+.ventajas-list p {
+    margin: 4px 0 0 0;
+    font-size: 1rem;
+    color: #ffffffa2;
+}
+/****************************************** RESPONSIVO **************************************/
+@media (max-width: 768px) {
+    /************** MENU DESPLEGABLE ****************/
+    nav ul {
+        position: fixed;
+        right: -100vw;
+        background: #000000ef;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        top: 64px;
+        gap: 0;
+        transition: right 0.4s;
+    }
+    nav ul.open {
+        right: 0;
+    }
+    nav ul li {
+        padding: 20px 0;
+        text-align: center;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-size: 1.5rem;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .empresa-nombre {
+    font-size: 4rem;
+    }
+
+    .decor-line {
+        width: 300px;
+    }
+    .refran {
+        font-size: 1.7rem;
+    }
+    /*********** QUIENES SOMOS *************/
+    .quienes-somos-section {
+        max-width: 78vw;
+        padding: 24px 8px;
+    }
+    .qs-img, .qs-img-right {
+        width: 100px;
+        height: 100px;
+        margin: 16px 16px 16px 0;
+    }
+    .qs-content {
+        font-size: 1rem;
+    }
+    .qs-img, .qs-img-right {
+        float: none;
+        display: block;
+        margin: 0 auto 16px auto;
+        shape-outside: none;
+    }
+    /******* VENTAJAS ***********/
+    .ventajas-modal-content {
+        flex-direction: column;
+        padding-top: 64px;
+        height: 100vh;
+        overflow-y: auto;      /* Permite scroll con la rueda en móvil/tablet */
+    }
+    .ventajas-modal-left, .ventajas-modal-right {
+        flex: none;
+        width: 100vw;
+        min-width: unset;
+        padding: 32px 12px;
+    }
+    .ventajas-modal-right {
+        overflow-y: visible;   /* Quita el scroll solo de la columna derecha */
+    }
+    .ventajas-list li {
+        max-width: 420px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ventajas-modal-right h2 {
+    margin-top: 0vh;
+
+}
+}
+/* Hamburger to X animation */
+.hamburger.open .bar1 {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.open .bar2 {
+    opacity: 0;
+}
+.hamburger.open .bar3 {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+/********************** INGREDIENTES **************************/
+
+.ingredientes-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centra horizontalmente todo */
+    max-width: 400px;
+    margin: 1rem auto;    /* centra el bloque en su contenedor */
+    font-family: Arial, sans-serif;
+    color: #ffffff71;
+    text-align: center;   /* centra el texto dentro de los elementos */
+}
+
+.ventaja-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.ingredientes-item > strong {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 1px #fff, 0 0 2px #ffffff, 0 0 21px #ffffff;
+    
+}
+
+.sublista-ingredientes {
+    
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+    text-align: left; 
+    width: 100%;    
+
+}
+
+.sublista-ingredientes li {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
