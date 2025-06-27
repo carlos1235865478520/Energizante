@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cofor Energy</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 <body>
     <!--------------------- HEADER ----------------------------->
@@ -19,7 +21,7 @@
             <li><a href="#" id="openVentajasModal">Ventajas</a></li>
             <li><a href="#" id="openIngredientesModal">Ingredientes</a></li>
             <li><a href="#productos">Productos</a></li>
-            <li><a href="#Contactanos">contactanos</a></li>
+            <li><a href="#" id="openContactModal">Contáctanos</a></li>
         </ul>
     </div>
     <div class="hamburger" id="hamburger">
@@ -39,19 +41,8 @@
     </section>
 
     <!--------------------- QUIENES SOMOS ----------------------------->
-    <section class="quienes-somos-section">
-        <h2 class="qs-title">¿Quiénes Somos?</h2>
-        <div class="qs-content">
-            <img src="assets/home.jpg" alt="Equipo" class="qs-img qs-img-left">
-            <p class="qs-desc">
-                <p>LorLorem, ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit eLorem, ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit eem, ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore?
-                <img src="assets/home3.jpg" alt="Valores" class="qs-img qs-img-right">
-                <p>lorem  ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore. ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore.ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore.
-            </p>
-        </div>
-    </section>
-    <!--------------------- MODAL -> VENTAJAS ----------------------------->
-    <div class="ventajas-modal" id="ventajasModal">
+    <section>
+        <div class="ventajas-modal" id="ventajasModal">
     <div class="ventajas-modal-content">
         <div class="ventajas-modal-left">
             <h1 class="empresa-nombre">Cofor Energy</h1>
@@ -102,6 +93,21 @@
         </div>
     </div>
 </div>
+    </section>
+
+    <section class="quienes-somos-section">
+        <h2 class="qs-title">¿Quiénes Somos?</h2>
+        <div class="qs-content">
+            <img src="assets/home.jpg" alt="Equipo" class="qs-img qs-img-left">
+            <p class="qs-desc">
+                <p>LorLorem, ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit eLorem, ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit eem, ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore?
+                <img src="assets/home3.jpg" alt="Valores" class="qs-img qs-img-right">
+                <p>lorem  ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore. ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore.ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore.
+            </p>
+        </div>
+    </section>
+    <!--------------------- MODAL -> VENTAJAS ----------------------------->
+    
 
 <!-- --------------------- MODAL INGREDIENTES ----------------------------->
 <div class="ventajas-modal" id="ingredientesModal">
@@ -124,11 +130,33 @@
                 <li>TERCER INGREDIENTE</li>
                 <li>CUARTO INGREDIENTE</li>
                 <li>QUINTO INGREDIENTE</li>
+                
+                
             </ul>
         </div>
 
         </div>
     </div>
+</div>
+<!-- ------------------------MODAL DE CONTACTO ---------------------------->
+<div class="contact-modal" id="contactModal">
+  <div class="contact-modal-content">
+    <h2>¡Conecta con nosotros!</h2>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/" target="_blank" class="social-icon facebook" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/1234567890" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:contacto@tusitio.com" class="social-icon email" aria-label="Correo">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
 </div>
     <script src="script.js"></script>
 </body>

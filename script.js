@@ -10,7 +10,7 @@ hamburger.addEventListener('click', () => {
 document.querySelectorAll('#nav-list a').forEach(link => {
     link.addEventListener('click', () => {
         navList.classList.remove('open');
-    }); // <-- Cierre agregado aquí
+    });
 });
 
 // MODAL VENTAJAS
@@ -21,10 +21,15 @@ const ventajasModal = document.getElementById('ventajasModal');
 const openIngredientesModal = document.getElementById('openIngredientesModal');
 const ingredientesModal = document.getElementById('ingredientesModal');
 
+// MODAL CONTACTO
+const openContactModal = document.getElementById('openContactModal');
+const contactModal = document.getElementById('contactModal');
+
 // Función para cerrar todos los modales
 function cerrarModales() {
     ventajasModal?.classList.remove('active');
     ingredientesModal?.classList.remove('active');
+    contactModal?.classList.remove('active');
     document.body.style.overflow = '';
 }
 
@@ -32,7 +37,7 @@ function cerrarModales() {
 if (openVentajasModal && ventajasModal) {
     openVentajasModal.addEventListener('click', (e) => {
         e.preventDefault();
-        cerrarModales(); // Cierra cualquier otro modal
+        cerrarModales();
         ventajasModal.classList.add('active');
         document.body.style.overflow = 'hidden';
     });
@@ -42,8 +47,18 @@ if (openVentajasModal && ventajasModal) {
 if (openIngredientesModal && ingredientesModal) {
     openIngredientesModal.addEventListener('click', (e) => {
         e.preventDefault();
-        cerrarModales(); // Cierra cualquier otro modal
+        cerrarModales();
         ingredientesModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+// Abrir modal de contacto
+if (openContactModal && contactModal) {
+    openContactModal.addEventListener('click', (e) => {
+        e.preventDefault();
+        cerrarModales();
+        contactModal.classList.add('active');
         document.body.style.overflow = 'hidden';
     });
 }
@@ -51,8 +66,28 @@ if (openIngredientesModal && ingredientesModal) {
 // Cerrar modales al hacer clic en cualquier otro enlace del menú
 document.querySelectorAll('#nav-list a').forEach(link => {
     link.addEventListener('click', () => {
-        if (link.id !== 'openVentajasModal' && link.id !== 'openIngredientesModal') {
+        if (
+            link.id !== 'openVentajasModal' &&
+            link.id !== 'openIngredientesModal' &&
+            link.id !== 'openContactModal'
+        ) {
             cerrarModales();
         }
     });
+});
+
+// Cerrar modales al hacer clic fuera del contenido
+[ventajasModal, ingredientesModal, contactModal].forEach(modal => {
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                cerrarModales();
+            }
+        });
+    }
+});
+
+// Cerrar modales con botón "X"
+document.querySelectorAll('.cerrar-modal').forEach(btn => {
+    btn.addEventListener('click', cerrarModales);
 });
