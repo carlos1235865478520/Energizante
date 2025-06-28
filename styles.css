@@ -282,6 +282,12 @@ nav ul li a:hover {
     color: #ffffffa2;
 }
 /********************** INGREDIENTES **************************/
+.ingredientes-modal {
+    display: none;
+}
+.ingredientes-modal.active {
+    display: flex;
+}
 
 .ingredientes-modal-right {
     flex: 1;
