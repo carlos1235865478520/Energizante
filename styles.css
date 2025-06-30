@@ -489,19 +489,6 @@ nav ul li a:hover {
     margin-top: 0vh;
     font-size: 2rem;
     }
-    /******** productos ********/
-    .modal {
-    align-items: center;      /* <-- Centra verticalmente el contenido del modal */
-    padding-top: 0;           /* <-- Quita el espacio extra arriba */
-  }
-
-  .modal-content {
-    max-width: 95vw;          /* <-- Que no ocupe todo el ancho */
-    max-height: 90vh;         /* <-- Que no ocupe todo el alto */
-    margin: 0 auto;
-    padding: 1rem;
-    overflow-y: auto;
-  }
     
 }
 /* Hamburger to X animation */
@@ -652,8 +639,37 @@ nav ul li a:hover {
   box-sizing: border-box;
   background: rgb(0, 0, 0);
   border-radius: 0; /* opcional */
-  overflow-y: auto;      /* <-- Permite scroll interno si se desborda */
-
+  
 }
 
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+    width: 98vw;
+    max-width: 420px;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 16px 6px;
+    margin-bottom: 16px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .content {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .text-section {
+    min-width: 0 !important;   /* <-- Esto es clave */
+    width: 100% !important;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
