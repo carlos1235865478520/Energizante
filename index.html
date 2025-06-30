@@ -19,8 +19,8 @@
         <ul id="nav-list">
             <li><a href="#home">Inicio</a></li>
             <li><a href="#" id="openVentajasModal">Ventajas</a></li>
-            <li><a href="#" id="openIngredientesModal">Ingredientes</a></li>
-            <li><a href="#productos">Productos</a></li>
+            <li><a href="#" id="openIngredientesModal">Proceso</a></li>
+            <li><a href="#" id="openProductosModal">Productos</a></li>
             <li><a href="#" id="openContactModal">Contáctanos</a></li>
         </ul>
     </div>
@@ -39,7 +39,15 @@
             <p class="refran">"Energía que impulsa tus días"</p>
         </div>
     </section>
-
+    <!-- Espacio para video centrado -->
+<!--<section class="video-section">
+  <div class="video-container">
+    <iframe width="560" height="315" src="assets/video.mp4"
+      title="Video Cofor Energy" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</section>-->
     <!--------------------- VENTAJAS ----------------------------->
     <section>
         <div class="ventajas-modal" id="ventajasModal">
@@ -102,9 +110,13 @@
         <div class="qs-content">
             <img src="assets/home.jpg" alt="Equipo" class="qs-img qs-img-left">
             <p class="qs-desc">
-                <p>LorLorem, ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit eLorem, ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit eem, ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore?
+                <p>Somos un grupo de jóvenes emprendedores bolivianos que hemos unido nuestras ideas, conocimientos y esfuerzo para desarrollar una bebida energética única, como parte de un proyecto de emprendimiento. Nuestro objetivo es crear un producto que no solo brinde energía, sino que también represente la riqueza natural y cultural de Bolivia.
+
+Este proyecto nació con la intención de innovar en el mercado de bebidas, aprovechando ingredientes locales como la hoja de coca, reconocida por sus propiedades energizantes y nutritivas. Queremos ofrecer una alternativa natural y consciente, pensada para personas activas que buscan rendimiento sin comprometer su salud.
                 <img src="assets/home3.jpg" alt="Valores" class="qs-img qs-img-right">
-                <p>lorem  ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore. ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore.ipsum dolor sit amet consectetur adipisicing elit. A explicabo tempora fugit error alias facere at hic corrupti dolores odio eligendi dolor ex, omnis atque voluptas dolorum, vero dolore inventore.
+                <p>Además de desarrollar un producto, buscamos aprender y crecer como emprendedores, promoviendo el trabajo en equipo, la creatividad y el compromiso con el entorno. Creemos firmemente en el potencial de las ideas que nacen desde lo local y se proyectan hacia un impacto positivo.
+
+Estamos dando nuestros primeros pasos, pero con una visión clara: demostrar que desde Bolivia se pueden crear productos de calidad, con identidad y propósito.
             </p>
         </div>
     </section>
@@ -119,35 +131,97 @@
         </div>
         <div class="ingredientes-modal-right">
             
-        <h2>NUESTROS INGREDIENTES</h2>
+        <h2>PROCESO DE FABRICACION</h2>
             <div class="decor-line ventajas-line"></div>
             <div class="ingredientes-item">
            
-            <strong>100% ingredientes naturales</strong>
             <ul class="sublista-ingredientes">
-                <li>PfgjhRIMER INGREDIENTE</li>
-                <li>SEGtyuUNDO INGREDIENTE</li>
-                <li>TERCER INGREfdgfdhgDIENTE</li>
-                <li>CUAdfgRTO INGREDIENTE</li>
-                <li>QUINtrydfgTO INGREDIENTE</li>   
+                <li>Escogemos hojas frescas y de calidad, provenientes de productores locales, asegurando su pureza y origen controlado.</li>
+                <li>Las hojas son lavadas cuidadosamente para eliminar impurezas y prepararlas para la extracción.</li>
+                <li>Utilizamos un proceso de maceración o infusión para obtener los principios activos de la hoja sin alterar sus propiedades nutritivas.</li>
+                <li>Cada sabor se mezcla con la base de hoja de coca, agua purificada, azúcar de caña y reguladores naturales como el ácido cítrico.</li>
+                <li>La bebida es filtrada y sometida a un proceso de pasteurización para conservar su frescura sin necesidad de conservantes artificiales.</li>
+                <li>Finalmente, se embotella en un ambiente higiénico y se etiqueta cada presentación lista para su distribución.</li>    
             </ul>
         </div>
-
         </div>
     </div>
 </div>
+<!-- ------------------------ MODAL PRODUCTOS ---------------------------->
+<div id="productosModal" class="modal">
+  <div class="modal-content">
+    <div class="main-container">
+      <!-- Primer cuadro -->
+      <div class="container">
+        <div class="content">
+          <div class="text-section">
+            <img src="assets/logo.jpeg" class="logo" />
+            <div class="flavor-box">
+              <div class="flavor-title">Sabor Maracuya</div>
+              <div class="flavor-desc">Explosión cítrica y dulce que despierta tus sentidos</div>
+            </div>
+            <h1>COFOR ENERGY-MARACUYA</h1>
+            <p>Una bebida energética que combina el exquisito sabor tropical del maracuyá con un toque equilibrado de dulzura y acidez, brindándote una experiencia refrescante que impulsa tu vitalidad y concentración en cada sorbo.</p>
+          </div>
+          <div class="image-section">
+            <img src="assets/maracuya.png" alt="Lata" class="can" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Segundo cuadro -->
+      <div class="container">
+        <div class="content">
+          <div class="text-section">
+            <img src="assets/logo.jpeg" class="logo" />
+            <div class="flavor-box">
+              <div class="flavor-title">Sabor Guarana</div>
+              <div class="flavor-desc">Sabor exótico que enciende tu energía</div>
+            </div>
+            <h1>COFOR ENERGY-GUARANA</h1>
+            <p>Con el intenso y característico sabor del guaraná, esta bebida energética ofrece una fusión natural de dulzura y potencia que estimula tu cuerpo y mente desde el primer trago.</p>
+          </div>
+          <div class="image-section">
+            <img src="assets/guarana.png" alt="botella cafe" class="can" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Tercer cuadro -->
+      <div class="container">
+        <div class="content">
+          <div class="text-section">
+            <img src="assets/logo.jpeg" class="logo" />
+            <div class="flavor-box">
+              <div class="flavor-title">Sabor cafe</div>
+              <div class="flavor-desc">Energía intensa con auténtico sabor a café.</div>
+            </div>
+            <h1>COFOR ENERGY-CAFE</h1>
+            <p>Disfruta del profundo y robusto sabor del café en una bebida energética que combina el impulso natural de la cafeína con una experiencia intensa y revitalizante, ideal para recargar cuerpo y mente.</p>
+          </div>
+          <div class="image-section">
+            <img src="assets/cafe.png" alt="botella cafe" class="can" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 <!-- ------------------------MODAL DE CONTACTO ---------------------------->
 <div class="contact-modal" id="contactModal">
     <div class="contact-modal-content">
         <h2>Contáctanos ahora</h2>
         <div class="social-icons">
-            <a href="https://www.facebook.com/tu_pagina" class="social-icon" target="_blank" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/16VpgwFpir/" class="social-icon" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/tu_perfil" class="social-icon" target="_blank" aria-label="Instagram">
+            <a href="https://www.instagram.com/cofor_energy" class="social-icon" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.tiktok.com/@tu_usuario" class="social-icon" target="_blank" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@cofor_energy?_t=ZM-8xXddKuQ2BM&_r=1" class="social-icon" target="_blank" aria-label="TikTok">
                 <i class="fab fa-tiktok"></i>
             </a>
         </div>
